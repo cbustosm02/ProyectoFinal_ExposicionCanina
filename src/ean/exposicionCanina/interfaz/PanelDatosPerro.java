@@ -148,7 +148,6 @@ public class PanelDatosPerro extends JPanel {
      */
     public void mostrarDatos(Perro perro) {
         String imagen = perro.darImagen();
-
         /*
         Método modificado - La imágenes ya vienen en base64 de la base
         Se genera la imagen en la misma ruta del proyecto, con el mismo nombre
@@ -164,25 +163,20 @@ public class PanelDatosPerro extends JPanel {
        /*
         Método modificado
          */
-
-
         try {
-
             BufferedImage bImagen = ImageIO.read(new File(imagen));
             Image laImagen = bImagen.getScaledInstance((int) (ANCHO * 0.85), (int) (ALTURA * 0.85), Image.SCALE_AREA_AVERAGING);
             etiquetaImagen.setIcon(new ImageIcon(laImagen));
         }
         catch (IOException e) {
-            JOptionPane.showMessageDialog(this, "Error al cargar la imagen del perro " + perro.darNombre(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this,
+                    "Error al cargar la imagen del perro " + perro.darNombre(), "Error", JOptionPane.ERROR_MESSAGE);
         }
             txtNombre.setText(perro.darNombre());
             txtRaza.setText(perro.darRaza());
             txtAltura.setText("" + perro.darPuntos());
             txtEdad.setText("" + perro.darEdad() + " meses");
-
             validate();
-
-
     }
 
     /**

@@ -83,7 +83,6 @@ public class ExposicionPerros {
         Perro perroBuscado = buscarPerro(nombreP);
         boolean agregado = false;
         if (perroBuscado == null) {
-
             /* -----------
                Método modificado - Ahora la imagen se guarda en base64 en la base de datos
                para evitar almacenar rutas parciales que no existen en otros dispositivos
@@ -99,7 +98,6 @@ public class ExposicionPerros {
             /*
                Método modificado
             ----------- */
-
             Perro nuevoPerro = new Perro(nombreP, razaP, imagenP, puntosP, edadP);
             try {
                 perros.create(nuevoPerro);
@@ -109,7 +107,6 @@ public class ExposicionPerros {
                 exception.printStackTrace();
             }
         }
-
         return agregado;
     }
 

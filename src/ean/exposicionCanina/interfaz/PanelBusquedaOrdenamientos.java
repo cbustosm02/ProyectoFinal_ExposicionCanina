@@ -31,11 +31,18 @@ public class PanelBusquedaOrdenamientos extends JPanel implements ActionListener
 
     private static final String ELIMINAR = "Eliminar";
 
+    /* ----------
+        Agregados
+     */
     private static final String ORDENAR_RAZA = "OrdenarRaza";
 
     private static final String ORDENAR_PUNTOS = "OrdenarPuntos";
 
     private static final String ORDENAR_EDAD = "OrdenarEdad";
+
+    /*
+        Agregados
+     ---------- */
 
     // -----------------------------------------------------------------
     // Atributos
@@ -68,6 +75,7 @@ public class PanelBusquedaOrdenamientos extends JPanel implements ActionListener
      * Es el botón para realizar una búsqueda
      */
     private JButton botonBuscar;
+
     // -----------------------------------------------------------------
     // Ordenamientos agregados
     // -----------------------------------------------------------------
